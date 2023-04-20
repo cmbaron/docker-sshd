@@ -1,4 +1,4 @@
-apiVersion: apps/v1a
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ssh
@@ -7,7 +7,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: containerssh
+      app: ssh
   template:
     metadata:
       labels:
