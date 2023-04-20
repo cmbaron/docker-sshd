@@ -8,7 +8,7 @@ RUN mkdir /var/run/sshd
 RUN apt-get install -y less curl iputils-ping
 
 RUN sed -ri 's/^StrictModes\s+.*/StrictModes no/' /etc/ssh/sshd_config \
-&& sed -ri 's/HostKey \/etc\/ssh\//HostKey \/etc\/ssh\/hostKeys\//g' /etc/ssh/sshd_config \
+&& sed -ri 's/#?HostKey \/etc\/ssh\//HostKey \/etc\/ssh\/hostKeys\//g' /etc/ssh/sshd_config \
 && echo "PasswordAuthentication no" >> /etc/ssh/sshd_config \
 && echo "GatewayPorts yes" >> /etc/ssh/sshd_config
 
