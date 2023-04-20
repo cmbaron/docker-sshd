@@ -9,6 +9,6 @@ spec:
     app: ssh
   ports:
     # the port that this service should serve on
-  - port: 22
+  - port: 2222
     protocol: TCP
-    targetPort: 22
+    targetPort: 2222

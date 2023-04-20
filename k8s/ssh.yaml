@@ -1,10 +1,13 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1a
 kind: Deployment
 metadata:
   name: ssh
   namespace: default
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: containerssh
   template:
     metadata:
       labels:
@@ -18,7 +21,7 @@ spec:
         #   - /usr/sbin/sshd
         #   - -De
         ports:
-        - containerPort: 22
+        - containerPort: 2222
       #  readinessProbe:
           # tcpSocket:
           #   port: 22
