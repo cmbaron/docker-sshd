@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: public.ecr.aws/s0y1t3q2/vscode-remote
+        image: public.ecr.aws/s0y1t3q2/baronos/vscode-remote
         imagePullPolicy: Always
         # command:
         #   - /usr/sbin/sshd
